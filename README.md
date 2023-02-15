@@ -4,3 +4,7 @@
 
 Trajectory of the observer is pre-computed using the Gradus package, and then passed to Unity, which will display the scenario in VR.
 
+# Installation 
+
+# Usage
+
