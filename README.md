@@ -8,3 +8,5 @@ Trajectory of the observer is pre-computed using the Gradus package, and then pa
 
 # Usage
 
+# Features
+
