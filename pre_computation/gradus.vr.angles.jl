@@ -1,11 +1,11 @@
 using Gradus
 using StaticArrays
 
-m = KerrMetric(M=1.0, a=0.0)
+m = KerrMetric(M = 1.0, a = 0.0)
 # coordinate: t    r      θ            ϕ          
 u = @SVector [0.0, 5.0, deg2rad(80), 0.0]
 # disc:               r_in            r_out  ϕ_inc
-d = GeometricThinDisc(Gradus.isco(m), 150.0, π/2)
+d = GeometricThinDisc(Gradus.isco(m), 150.0, π / 2)
 
 # need a velocity prescription for the observer
 # so a simple one is that the observer that is time-like stationary
@@ -32,18 +32,18 @@ Plots.gr()
 
 function plot_event_horizon!(p, m; N = 32, kwargs...)
     R, ϕ = event_horizon(m, resolution = N)
-    
-    θ = range(0, stop=π, length=N)
+
+    θ = range(0, stop = π, length = N)
     x = R .* cos.(ϕ) .* sin.(θ)'
     y = R .* sin.(ϕ) .* sin.(θ)'
-    z = R .* repeat(cos.(θ)',outer=[N, 1])
+    z = R .* repeat(cos.(θ)', outer = [N, 1])
 
     surface!(p, x, y, z; kwargs...)
 end
 
 begin
     LIM = 10
-    p = plot(legend=false)
+    p = plot(legend = false)
     for sol in sols.u
         tspan = range(0.0, min(last(sol.t), 100.0), 300)
         # interpolate at selected times
@@ -59,10 +59,17 @@ begin
         # plot
         plot!(p, x, y, z)
     end
-    plot!(p, [0], [0], [0], ms=50)
+    plot!(p, [0], [0], [0], ms = 50)
 
     plot_event_horizon!(p, m)
-    p = plot(p, xlims = (-LIM, LIM), ylims = (-LIM, LIM), zlims = (-LIM, LIM), legend = false, camera=(10, 10))
+    p = plot(
+        p,
+        xlims = (-LIM, LIM),
+        ylims = (-LIM, LIM),
+        zlims = (-LIM, LIM),
+        legend = false,
+        camera = (10, 10),
+    )
 
     p
 end
