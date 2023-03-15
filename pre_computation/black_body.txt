@@ -1,0 +1,21 @@
+- converting from wavelength to rgb
+
+- look into using black body radiation to map colour and intensity
+    - function describing temperature of accretion disc at various points
+    - look into mapping this temperature to black body radiation
+    - how bad/good of an approximation is this?
+    - planck's law
+    - top-down view of accretion disc for temperature distribution
+    - or look up table of r, phi, or theta, t coordinates to see temp given coordinates
+    - and then colour and intensity
+    - able to redshift this
+    - will give a continuous distribution of temp for accretion disc, can be generalised to thick and thin discs.
+
+
+- Joel to push his comments and conversion rgb - wavelength code to the github
+
+- produce one .mp4 but may need stereoscopic video - possibility to use 2 of the same frames for each eye?
+    - make one for now and see how we go, may not be too difficult 
+
+
+

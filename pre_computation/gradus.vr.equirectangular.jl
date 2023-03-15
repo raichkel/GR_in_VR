@@ -23,7 +23,7 @@ end
 
 # output image dimensions (y, x)
 scale = 5
-dim = (150, 300) .* scale
+dim = (180, 360) .* scale
 
 angle_pairs = [inverse_equirectangular(x, y; R = scale) for y in 1:dim[1], x in 1:dim[2]]
 vs = [Gradus.sky_angles_to_velocity(m, u, v_observer, -θ, ϕ) for (θ, ϕ) in angle_pairs]
