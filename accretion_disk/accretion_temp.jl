@@ -89,18 +89,18 @@ a = 0.05
 
 # so for now I will use 4.5 light days ie. 1.16e14 m
 
-r_outer = 1.16e14
+r_outer = 150 #1.16e14
 
 r_in = r_isco(a, M)
-r_max = r_in + r_outer
-dist_step = 1e13
 
-filename = "temps.txt"
+dist_step = 10
+
+filename = "accretion_disk/temps.csv"
 file = open(filename, "w")
 
-write(file, "radius, temp, λ \n")
+write(file, "radius,temp,λ\n")
 
-for radius in range(start = r_in+dist_step, stop = r_max, step = dist_step)
+for radius in range(start = r_in+dist_step, stop = r_outer, step = dist_step)
     # we cant use r_in as it has T=0 and we get infinite wavelength
 
     temp = temperature(radius, a, M)
