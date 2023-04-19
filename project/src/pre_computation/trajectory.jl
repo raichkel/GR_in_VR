@@ -9,8 +9,14 @@ using StaticArrays
 
 # define the metric object
 m = KerrMetric(M = 1.0, a = 0.0)
+
+# define initial observer position
+t_init = 0.0
+r_init = 250.0
+θ_init = deg2rad(70)
+φ_init = 0.0
 # coordinate: t    r      θ            ϕ          
-u = @SVector [0.0, 250.0, deg2rad(70), 0.0]
+u = @SVector [t_init, r_init, θ_init, φ_init]
 
 
 # need a velocity prescription for the observer
