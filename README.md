@@ -14,13 +14,15 @@ This project relies heavily on the [Gradus package](https://github.com/astro-gro
  `julia>] add Gradus`\
 `julia> using Gradus`
 
-Loading Julia using the command line flag \
+Loading Julia using the command line flag 
 
-`--project="project"`\
+`--project="project"`
 
 will load in the necessary packages alongside this.
 
 # Usage
+
+The GR in VR project can be used to fully calculate a trajectory along a geoedesic, into a black hole, and then produce a simulation of the view for an observer moving along this trajectory. 
 
 # Features
 
