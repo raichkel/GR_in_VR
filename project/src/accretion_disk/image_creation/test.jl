@@ -4,13 +4,13 @@
 using Images
 using FileIO
 
-path = "/Users/joel_mills/Documents/GR_in_VR/image3.png"
+path = "project/src/pre_computation/images/texture.png"
 disc_image = Gray.(load(path))
-path2 = "/Users/joel_mills/Documents/GR_in_VR/style5.jpg"
+path2 = "project/src/pre_computation/images/colour_gradient.jpg"
 smooth_image = Gray.(load(path2))
 
 for i in eachindex(disc_image)
     disc_image[i] *= smooth_image[i]
 end
 
-save("/Users/joel_mills/Documents/GR_in_VR/gray_disc4.png", reverse(disc_image; dims = 1))
+save("project/test_frames/pixelwise.png", reverse(disc_image; dims = 1))
