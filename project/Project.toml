@@ -1,0 +1,16 @@
+name = "project"
+uuid = "827ed193-1bed-4f42-9071-98ecf279d307"
+authors = ["Rachel <rachelkane04@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+Gradus = "c5b7b928-ea15-451c-ad6f-a331a0f3e4b7"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+PackageCompiler = "9b87118b-4619-50d2-8e1e-99f35a4d4d9d"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+SharedArrays = "1a1011a3-84de-559e-8e89-a11a2f7dc383"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
