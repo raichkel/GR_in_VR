@@ -20,12 +20,16 @@ Loading Julia using the command line flag
 
 will load in the necessary packages alongside this.
 
+The repository can then be cloned to your local machine as usual using `git clone`.
+
 # Usage
 
-The GR in VR project can be used to fully calculate a trajectory along a geoedesic, into a black hole, and then produce a simulation of the view for an observer moving along this trajectory. The simulation is produced initially as a series of equirectangular frames, and then these frames are 'stitched together' into a video format, which is then able to be viewed using an Virtual Reality headset.
+The GR in VR project can be used to fully calculate a trajectory along a geoedesic, into a black hole, and then produce a simulation of the view for an observer moving along this trajectory. The simulation is produced initially as a series of equirectangular frames, and then these frames are 'stitched together' into a video format, which is then able to be viewed using an Virtual Reality headset. The project is optimised for use on a High Peformance Computing (HPC) system, specifically one operating with the SLURM scheduler. As such, 
 
 
-`project/src/pre_computation/trajectory.jl` can be used to calculate the trajectory that an obseerver would take as they fell into the event horizon of the black hole. A `.txt` file is produced with the observer position and observer velocity for each timestep.
+`project/src/pre_computation/trajectory.jl` can be used to calculate the trajectory that an observer would take from any given initial conditions as they fell into the event horizon of the black hole. A `.txt` file is produced with the observer position and observer velocity for each timestep. The Repository also comes with several example trajectories; `NAME OF EXAMPLES`, which can be used for !CORRESPONDING SCENARIOS].
+
+
 
 # Features
 
