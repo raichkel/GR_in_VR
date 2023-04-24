@@ -24,8 +24,8 @@ will load in the necessary packages alongside this.
 
 The GR in VR project can be used to fully calculate a trajectory along a geoedesic, into a black hole, and then produce a simulation of the view for an observer moving along this trajectory. The simulation is produced initially as a series of equirectangular frames, and then these frames are 'stitched together' into a video format, which is then able to be viewed using an Virtual Reality headset.
 
-### To Calulate a Trajectory:
-Using `project/src/pre_computation/trajectory.jl`
+
+`project/src/pre_computation/trajectory.jl` can be used to calculate the trajectory that an obseerver would take as they fell into the event horizon of the black hole. A `.txt` file is produced with the observer position and observer velocity for each timestep.
 
 # Features
 
