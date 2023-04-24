@@ -39,4 +39,7 @@ The frames are outputted as greyscale images, and so the `colouriser.py` file co
 
 
 # Features
+### Schwarzschild Black Holes
 
+
+### Kerr Black Holes
