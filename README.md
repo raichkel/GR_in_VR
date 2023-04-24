@@ -33,7 +33,9 @@ The GR in VR project can be used to fully calculate a trajectory along a geoedes
 Given a trajectory, the simulation can then be produced. `image_array.sh` creates an array job over the entire trajectory. For each sub-job in the array, the corresponding step in the trajectory is read in and passed to `runner.jl`, which sets up all the necessary packages and variables. `runner.jl` then calls the relevant file to produce and equirectangular frame at this point in the trajectory. `serial.jl` for a Schwarzschild black hole, and `kerr.jl` for a Kerr black hole. Each frame along the observer's trajectory is outputted to a file, which can then be post-processed and turned into a usable video.
 
 ### Post-Processing
+The frames are outputted as greyscale images, and so the `colouriser.py` file colours each frame. The frames can then be compiled into a video using the `ffmpeg` software.
 
+`ffmpeg -r 60 -f image2 -s 2520x1260 -i colourised\colour_frame_%d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p black_hole.mp4`
 
 
 # Features
