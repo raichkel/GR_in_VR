@@ -24,10 +24,12 @@ The repository can then be cloned to your local machine as usual using `git clon
 
 # Usage
 
-The GR in VR project can be used to fully calculate a trajectory along a geoedesic, into a black hole, and then produce a simulation of the view for an observer moving along this trajectory. The simulation is produced initially as a series of equirectangular frames, and then these frames are 'stitched together' into a video format, which is then able to be viewed using an Virtual Reality headset. The project is optimised for use on a High Peformance Computing (HPC) system, specifically one operating with the SLURM scheduler. As such, 
+The GR in VR project can be used to fully calculate a trajectory along a geoedesic, into a black hole, and then produce a simulation of the view for an observer moving along this trajectory. The simulation is produced initially as a series of equirectangular frames, and then these frames are 'stitched together' into a video format, which is then able to be viewed using an Virtual Reality headset. The project is optimised for use on a High Peformance Computing (HPC) system, specifically one operating with the SLURM scheduler. As such, the setup may not be optimal for use on a personal computer. Further in this README, there is a discussion of how to change the code to better run it on a personal machine. 
 
 
 `project/src/pre_computation/trajectory.jl` can be used to calculate the trajectory that an observer would take from any given initial conditions as they fell into the event horizon of the black hole. A `.txt` file is produced with the observer position and observer velocity for each timestep. The Repository also comes with several example trajectories; `NAME OF EXAMPLES`, which can be used for !CORRESPONDING SCENARIOS].
+
+Given a trajectory, the simulation can then be produced. `image_array.sh` creates an array job over the entire trajectory. For each sub-job in the array, the corresponding step in the trajectory is read in and passed to `runner.jl`
 
 
 
