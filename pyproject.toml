@@ -4,6 +4,6 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "Gr in VR"
+name = "project"
 authors = [{name = "Rachel Kane", email = "rachelkane04@gmail.com"}]
 dynamic = ["version", "description"]
