@@ -18,7 +18,9 @@ using Images
 
 
 function velocity_vector(m, u, v)
-    # define velocity vector
+    """
+    define velocity vector
+    """
     x = u[2] * sin(u[3]) * cos(u[4])
     y = u[2] * sin(u[3]) * sin(u[4])
 
