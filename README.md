@@ -4,6 +4,29 @@
 
 Trajectory of the observer is pre-computed using the Gradus package, and then passed to Unity, which will display the scenario in VR.
 
+
+# Repository Structure
+
+💫 [final_simulations] (https://github.com/raichkel/GR_in_VR/tree/main/final_simulations) \
+    Contains output simulations for Schwarzschild and Kerr black holes, as well as a Morris-Thorne wormhole. \
+💫 [project/src/pre_computation] (https://github.com/raichkel/GR_in_VR/tree/main/project/src/pre_computation) \
+    Code to generate simulation, including test images and test simulations. \
+💫 [project/src/accretion_disk] (https://github.com/raichkel/GR_in_VR/tree/main/project/src/accretion_disk) \
+    Process files for modelling the accretion disk. \
+💫 [project/src/batch_scripts] (https://github.com/raichkel/GR_in_VR/tree/main/project/src/batch_scripts) \
+    Shell script files for running code on HPC. \
+💫 [project/src/sysimage] (https://github.com/raichkel/GR_in_VR/tree/main/project/src/sysimage) \
+    Code to generate sysimage using [PackageCompiler] (https://github.com/JuliaLang/PackageCompiler.jl) package. \
+💫 [project/src/VR] (https://github.com/raichkel/GR_in_VR/tree/main/project/src/VR) \
+    C# code for running simulation on VR headset with Unity. \
+💫 [project/post_processing] (https://github.com/raichkel/GR_in_VR/tree/main/project/post_processing) \
+    Code for colourising images and compiling it into a video. \
+💫 [project/runner_files] (https://github.com/raichkel/GR_in_VR/tree/main/project/runner_files) \
+    Runner files for use with the batch scripts on HPC systems. \
+💫 [project/test_frames] (https://github.com/raichkel/GR_in_VR/tree/main/project/test_frames) \
+    Miscellaneous frames used in test code.\
+  
+  
 # Installation 
 This project relies heavily on the [Gradus package](https://github.com/astro-group-bristol/Gradus.jl) which, in turn, relies on aspects of the [AstroRegistry](https://github.com/astro-group-bristol/AstroRegistry) AstroRegistry. The AstroRegistry can be added as follows:\
 \
