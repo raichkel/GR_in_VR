@@ -1,3 +1,5 @@
+# Author: Fergus Baker
+
 using Gradus
 using StaticArrays
 using Images

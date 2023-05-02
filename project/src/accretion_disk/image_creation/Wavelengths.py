@@ -1,3 +1,5 @@
+#Author: Joel Mills
+
 # Test code to take a grayscale image, remap the [0,1] values between some visible wavelength range,
 # then use Bruton's algorithm to convert these to their approximate RGB values
 # DON'T USE --- Bruton's Algorithm is good but the colours it maps to are too simplistic & saturated

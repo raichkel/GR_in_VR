@@ -1,3 +1,7 @@
+# Author: Joel Mills
+
+# wavelength to RGB conversion function
+
 function wav2RGB(wavelength)
     
     # converts wavelength to RGB value

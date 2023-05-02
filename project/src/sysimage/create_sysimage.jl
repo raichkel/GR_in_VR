@@ -1,3 +1,8 @@
+# Author: Rachel Kane
+
+# creates sysimage for project - pre-compiles all required dependencies within project into .so file
+# for faster unpacking and running
+
 using PackageCompiler
 using Pkg
 

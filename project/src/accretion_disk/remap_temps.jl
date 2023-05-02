@@ -1,3 +1,6 @@
+# Author: Rachel Kane
+# force remap UV/X-ray spectrum of accretion disk into optical range for λ to RGB conversions
+
 using CSV
 using Printf
 using DataFrames

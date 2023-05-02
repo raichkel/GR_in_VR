@@ -1,3 +1,11 @@
+# Author: Rachel Kane
+# (using code from emission_profile.jl)
+
+# using set of functions defining accretion disk thermodynamics/structure from emission_profile.jl
+
+# calculate wavelength and temp for set or radii over disk
+
+
 using Printf
 """
 From Reynolds (2020) (Eq2-4)

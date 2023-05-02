@@ -1,35 +1,28 @@
+# Author: Fergus Baker, Joel Mills
+
 using Gradus
 using StaticArrays
 using Images
 using FileIO
 using Plots
+using PyCall
+using Conda 
 
+# making sure we have the colour module installed
+Conda.add("colour")
 
-###################
-# Code to produce a single frame for the GR in VR project
-# Produces full colour, smooth image (ie. no textures yet applied) using wavelength spectrum emitted
-# by accretioon disk, as well as stock image for celestial sphere (background)
-# requires path to background image and smooth wavelenth gradient.
-###################
+py"""
+import colour
+import numpy as np
 
-# This section: outdated, contains function sto convert RGB values to wavelengths using PyCall
-#using PyCall
-#using Conda 
+# function to convert RGB value to wavelength
+def RGB2wav(RGB):
+    RGB_f = np.array(RGB)/255
+    wl, xy_1, xy_2 = colour.convert(RGB_f, "Output-Referred RGB", "Dominant Wavelength")
+    return abs(wl)
+"""
 
-# # making sure we have the colour module installed
-#Conda.add("colour")
-#Conda.add("colour", "/user/home/pq20206/project")
-
-#py"""
-#import colour
-#import numpy as np
-
-#def RGB2wav(RGB):
-#    RGB_f = np.array(RGB)/255
-#    wl, xy_1, xy_2 = colour.convert(RGB_f, "Output-Referred RGB", "Dominant Wavelength")
-#    return abs(wl)
-#"""
-
+# function to convert wavelength to RGB value
 function wav2RGB(wavelength)
     w = trunc(wavelength)
     # colour
@@ -93,11 +86,10 @@ end
 
 m = KerrMetric(M = 1.0, a = 0.0)
 # coordinate: t    r      θ            ϕ          c
-#u = @SVector [0.0, 20.0, deg2rad(70), 0.0]
-u = @SVector [0.0, r, θ, ϕ]
+u = @SVector [0.0, 10.0, deg2rad(70), 0.0]
 # disc:               r_in            r_out  ϕ_inc
 d = GeometricThinDisc(Gradus.isco(m), 150.0, π/2)
-print(Gradus.isco(m))
+#print(Gradus.isco(m))
 
 # need a velocity prescription for the observer
 # so a simple one is that the observer that is time-like stationary
@@ -116,7 +108,7 @@ function inverse_equirectangular(x, y; φ₀ = 0, λ₀ = 0, φ₁ = 0, R = 1.0)
 end
 
 # output image dimensions (y, x)
-#scale = 5
+scale = 5
 dim = (180, 360) .* scale
 
 angle_pairs = [inverse_equirectangular(x, y; R = scale) for y in 1:dim[1], x in 1:dim[2]]
@@ -154,8 +146,7 @@ for i in eachindex(image)
 
     if (p.status == StatusCodes.IntersectedWithGeometry)
 
-        # change from r, ϕ = p.u2[2], p.u2[4] to r, ϕ = p.x[2], p.x[4] with Gradus update
-        r, ϕ = p.x[2], p.x[4]
+        r, ϕ = p.u2[2], p.u2[4]
         # scale r between 0 and 2
         x = cos(ϕ) * r / d.outer_radius + 1
         y = sin(ϕ) * r / d.outer_radius + 1
@@ -163,18 +154,16 @@ for i in eachindex(image)
         xi = trunc(Int, x * image_x_mid) + 1
         yi = trunc(Int, y * image_y_mid) + 1
 
-        #g = redshift_func(m, p, 0.0)
-        #wavelength = (float(disc_image[yi, xi])*(max_wavelength-min_wavelength) + min_wavelength)*g
-        r = float(red(disc_image[yi, xi]))
-        g = float(green(disc_image[yi, xi]))
-        b = float(blue(disc_image[yi, xi]))
-        #value = wav2RGB(wavelength)
-        value = RGB{N0f8}(r, g, b)
+        g = redshift_func(m, p, 0.0)
+        wavelength = (float(disc_image[yi, xi])*(max_wavelength-min_wavelength) + min_wavelength)*g
+        ###r = float(red(disc_image[yi, xi]))
+        ##g = float(green(disc_image[yi, xi]))
+        #b = float(blue(disc_image[yi, xi]))
+        value = wav2RGB(wavelength)
 
     elseif (p.status == StatusCodes.OutOfDomain)
 
-        # change from θ, ϕ = p.u2[3], p.u2[4] to θ, ϕ = p.x[3], p.x[4] with Gradus update 
-        θ, ϕ = p.x[3], p.x[4]
+        θ, ϕ = p.u2[3], p.u2[4]
         yi = ceil(Int, (mod2pi(θ)/(2*pi))*dim_y)
         xi = ceil(Int, (mod2pi(ϕ)/(2*pi))*dim_x)
         r = float(red(stars[yi, xi]))
@@ -189,72 +178,3 @@ end
 
 # y is flipped, so reverse along that axis
 save("colourized7.png", reverse(image; dims = 1))
-
-
-
-
-"""
-struct GeodesicPoint{T,V<:AbstractVector} <: AbstractGeodesicPoint{T}
-    "Return code of the integrator for this geodesic."
-    status::StatusCodes.T
-    "Start affine time"
-    t1::T
-    "End affine time"
-    t2::T
-    "Start four position"
-    u1::V
-    "End four position"
-    u2::V
-    "Start four velocity"
-    v1::V
-    "End four velocity"
-    v2::V
-    # we don't store the problem parameters
-    # and can create a specialistion for the carter method
-    # then provide dispatched accessor methods
-    # p::P
-end
-
-"""
-
-"""
-function process_solution(_, sol::SciMLBase.AbstractODESolution{T}) where {T}
-    @inbounds @views begin
-        us, ts, _ = unpack_solution(sol)
-
-        u_start = SVector{4,T}(us[1][1:4])
-        v_start = SVector{4,T}(us[1][5:8])
-        t_start = ts[1]
-
-        u_end = SVector{4,T}(us[end][1:4])
-        v_end = SVector{4,T}(us[end][5:8])
-        t_end = ts[end]
-
-        GeodesicPoint(sol.prob.p.status, t_start, t_end, u_start, u_end, v_start, v_end)
-    end
-end
-
-@inline function redshift_function(m::KerrMetric, u, v)
-    isco = Gradus.isco(m)
-    if u[2] > isco
-        regular_pdotu_inv(m, u, v)
-    else
-        plunging_p_dot_u(m, u, v, isco)
-    end
-end
-
-
-
-
-image = zeros(RGB{N0f8}, dim)  or  rand(RGB{N048}, dim)
-eg. pixel = image[i] = RGB{N0f8}(1.0, 0.0, 0.0)
-R = float(red(pixel))
-G = float(green(pixel))
-B = float(blue(pixel))
-#note RGB values will already be normalized
-save("image/path", colorview(RGB, reverse(image; dims=1)))
-
-inner_radius = 6.0
-outer_radius = 150.0
-"""
-

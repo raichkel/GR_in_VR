@@ -1,10 +1,12 @@
+#Author: Joel Mills
+
 #Junk code to test seam removal is working as expected
 #basically replace pixel values along the seam with the average of their immediate horizontal neighbours
 
 using Images
 using FileIO
 
-image_file = "project/test_frames/pcolour_frame_2708.png"
+image_file = "project/test_frames/colour_frame_2708.png"
 disc_image = Gray.(load(image_file))
 image_y, image_x = size(disc_image)
 image_y_mid = image_y ÷ 2

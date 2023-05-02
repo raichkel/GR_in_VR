@@ -1,3 +1,4 @@
+#Author: Joel Mills
 #Attempted code to unwrap an image of an accretion disc in cartesian coordinates such that the new image axes are the polar coordinates (Polar Unwrap)
 #DON'T USE
 

@@ -1,5 +1,11 @@
-#radii in temps.txt from 6.0 to 150.0 in steps of 0.02
-#create grayscale (w. applied cmap) image of accretion disc where each pixel has its radius from the center computed and is filled in according 
+#Author: Joel Mills
+
+# code to create smooth disk gradient image for use in simulation
+
+
+
+# the radii in temps.csv are from 6.0 to 150.0 in steps of 0.02
+# create grayscale (w. applied cmap) image of accretion disc where each pixel has its radius from the center computed and is filled in according 
 # to the lookup table given by temps.txt. Trim and normalize the frequency spectrum accordingly to fit between 0.0 and 1.0 and 
 # smoothly taper out to black at the outermost radius of the accretion disc.
 

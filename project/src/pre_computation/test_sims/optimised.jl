@@ -1,10 +1,14 @@
-# using Distributed
-# addprocs(nprocs(), exeflags="--project")
+
+# Author: Joel Mills
+
+# attempt at parallelising the image generation process - was unsuccessful due to shared memory issues
+using Distributed
+addprocs(nprocs(), exeflags="--project")
 @everywhere using Gradus, StaticArrays, SharedArrays, Images, Distributed, FileIO, Plots #,Pkg
 
-# @everywhere Pkg.activate(".")
-# @everywhere Pkg.instantiate()
-# @everywhere Pkg.precompile()
+@everywhere Pkg.activate(".")
+@everywhere Pkg.instantiate()
+@everywhere Pkg.precompile()
 
 
 

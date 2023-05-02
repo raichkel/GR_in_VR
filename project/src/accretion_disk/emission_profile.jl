@@ -1,3 +1,7 @@
+# set of functions defining accretion disk thermodynamics/structure
+
+
+
 """
 From Reynolds (2020) (Eq2-4)
 Calculates the radius of the inner most stable circular orbit of the a black hole,

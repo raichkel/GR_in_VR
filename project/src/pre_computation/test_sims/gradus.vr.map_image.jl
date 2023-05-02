@@ -1,3 +1,7 @@
+# Author: Fergus Baker
+
+# Maps a sample image onto the disk of the equirectangular image of the black hole
+
 using Gradus
 using StaticArrays
 using Images

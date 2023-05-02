@@ -1,3 +1,5 @@
+# Author: Joel Mills
+
 # Code to compute the trajectory of a free-falling observer until the horizon is crossed,
 # then write the observer's 4-position & 4-velocity at evenly spaced timestamps to a txt file
 # Application is for rows to be read as inputs for an array job on BC4
@@ -38,7 +40,7 @@ points = process_solution(m, trajectory)
 # writing the observer's 4-position and 4-velocity for each point to a txt file
 let point = [points.u1; points.v1], t = 0.0, i = 1
 
-    open("project/src/pre_computation/array_job.txt", "w") do f
+    open("project/src/pre_computation/trajectories/array_job.txt", "w") do f
 
         #do time increments every 2.5s until the radial coordinate is less than the Schwarzchild outer_radius
         # (in natural units c=1 & G=1, Schwarzchild radius = 2.0 if the mass is 1.0 --- R =: 2*G*m/c^2)

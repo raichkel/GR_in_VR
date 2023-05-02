@@ -1,3 +1,5 @@
+#Author: Joel Mills
+
 #This code Lorentz transforms an equirectangular projection of the observer's night sky. Here we use the world map as an example image,
 # since it is an equirectangular projection of the world globe. The boost is chosen in the direction of the north pole, leading to aberration
 # about that axis. The key feature of this code is that we express the Projective Lorentz transform as a simpler Möbius transfom of the complex 

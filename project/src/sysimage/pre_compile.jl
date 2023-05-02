@@ -1,3 +1,7 @@
+# Author: Fergus Baker, Rachel Kane, Joel Mills
+
+# small image version of the black hole equirectangular generator for use with sysimage
+
 using FileIO
 using Plots
 using Gradus

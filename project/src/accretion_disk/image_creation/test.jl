@@ -1,3 +1,5 @@
+#Author: Joel Mills
+
 #Junk code to test that pixel-wise multiplication of 2 grayscale images works as intended
 #application to ensure final accretion disc texture smoothly tapers to black at the edges
 
