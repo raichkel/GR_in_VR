@@ -20,7 +20,7 @@
 
 
 # Specify the path to the trajectory file
-config=project/src/pre_computation/array_job_7.txt
+config=project/src/pre_computation/trajectories/kerr_trajectory.txt
 
 # Extract the t value for the current $SLURM_ARRAY_TASK_ID
 t=$(awk -v ArrayTaskID=$SLURM_ARRAY_TASK_ID '$1==ArrayTaskID {print $2}' $config)

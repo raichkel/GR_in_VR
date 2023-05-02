@@ -21,7 +21,7 @@
 
 
 # Specify the path to the trajectory file
-config=project/src/pre_computation/trajectories/shwarzschild_trajectory.txt
+config=project/src/pre_computation/trajectories/wormhole_trajectory.txt
 
 # Extract the t value for the current $SLURM_ARRAY_TASK_ID
 t=$(awk -v ArrayTaskID=$SLURM_ARRAY_TASK_ID '$1==ArrayTaskID {print $2}' $config)
@@ -84,7 +84,7 @@ tasknum=${SLURM_ARRAY_TASK_ID}
 # setting t, r, theta, phi, v1, v2, v3, v4, tau
 
 
-julia -tauto -Jproject/sysimage.so --project="project" project/runner_files/runner_shw.jl ${tasknum} ${t} ${r} ${theta} ${phi} ${v1} ${v2} ${v3} ${v4} ${tau}
+julia -tauto -Jproject/sysimage.so --project="project" project/runner_files/runner_worm.jl ${tasknum} ${t} ${r} ${theta} ${phi} ${v1} ${v2} ${v3} ${v4} ${tau}
 
 # Output the end time
 printf "\n\n"
