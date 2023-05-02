@@ -1,0 +1,8 @@
+################
+# use this line in git bash/other command line to compile all files in colourised directory into video black_hole.mp4
+# -r framerate
+# -crf quality, 15 high qual
+################
+
+
+ffmpeg -r 60 -f image2 -s 2520x1260 -i colourised_kerr_slower/colour_frame_kerr_%d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p kerr_black_hole_slower.mp4
