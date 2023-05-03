@@ -1,4 +1,4 @@
-[Home](https://raichkel.github.io/GR_in_VR/) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GitHub](https://github.com/raichkel/GR_in_VR)
+[Home](https://raichkel.github.io/GR_in_VR/) | [GitHub](https://github.com/raichkel/GR_in_VR)
 
 # Usage
 

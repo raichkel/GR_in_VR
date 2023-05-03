@@ -1,4 +1,4 @@
-[Home](https://raichkel.github.io/GR_in_VR/) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GitHub](https://github.com/raichkel/GR_in_VR)
+[Home](https://raichkel.github.io/GR_in_VR/) | [GitHub](https://github.com/raichkel/GR_in_VR)
 # Simulation Stages
 
 The simulation process operates on a number of stages, which are laid out here for clarity. Please see [Usage](https://raichkel.github.io/GR_in_VR/usage.html) for further information on running this code.

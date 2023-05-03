@@ -1,4 +1,4 @@
-[Home](https://raichkel.github.io/GR_in_VR/) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[GitHub](https://github.com/raichkel/GR_in_VR)
+[Home](https://raichkel.github.io/GR_in_VR/) | [GitHub](https://github.com/raichkel/GR_in_VR)
 
 # Features
 
@@ -7,9 +7,12 @@ Here are links to full simulation examples of the three main functionalities of 
 ### Schwarzschild Black Holes
 For the full example simulation see [here](https://github.com/raichkel/GR_in_VR/blob/main/final_simulations/shwarzschild_black_hole.mp4). The files are large and so may have to be downloaded to be viewed.
 
+![Schwarzschild](/docs/colour_frame_shwarzschild_2.png)
+
 ### Kerr Black Holes
 For the full example simulation see [here](https://github.com/raichkel/GR_in_VR/blob/main/final_simulations/kerr_black_hole_slower.mp4). The files are large and so may have to be downloaded to be viewed.
-
+![Kerr](/docs/colour_frame_kerr_112.png)
 
 ### Morris-Thorne Wormholes
 For the full example simulation see [here](https://github.com/raichkel/GR_in_VR/blob/main/final_simulations/wormhole.mp4). The files are large and so may have to be downloaded to be viewed.
+![Wormhole](/docs/wormhole.jpeg)
