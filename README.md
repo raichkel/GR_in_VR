@@ -21,7 +21,7 @@ The documentation for this project can be found on GitHub Pages, [here](https://
 💫 [GR_in_VR/project/src/batch_scripts/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/batch_scripts) \
     Shell script files for running code on HPC. \
 💫 [GR_in_VR/project/src/sysimage/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/sysimage) \
-    Code to generate sysimage using [PackageCompiler] (https://github.com/JuliaLang/PackageCompiler.jl) package. \
+    Code to generate sysimage using [PackageCompiler](https://github.com/JuliaLang/PackageCompiler.jl) package. \
 💫 [GR_in_VR/project/src/VR/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/VR) \
     C# code for running simulation on VR headset with Unity. \
 💫 [GR_in_VR/project/post_processing/](https://github.com/raichkel/GR_in_VR/tree/main/project/post_processing) \
