@@ -23,4 +23,7 @@ The repository can then be cloned to your local machine as usual using `git clon
 
 The project as-is relies on HPC facilities. Once you have decided what object you want to simulate, you can then begin by uploading the relevant file to the HPC system. 
 
-We will use the [Schwarzschild black hole]() as an example:
+We will use the [Schwarzschild black hole](https://github.com/raichkel/GR_in_VR/blob/main/final_simulations/shwarzschild_black_hole.mp4) as an example:
+
+- Copy the [`schwarzschild.sh`](https://github.com/raichkel/GR_in_VR/tree/main/project/src/batch_scripts/schwarzschild.sh) batch script onto the HPC machine.
+- Copy the [`runner_shw.jl`](https://github.com/raichkel/GR_in_VR/tree/main/project/runner_files/runner_shw.jl) file onto the HPC machine.

@@ -8,8 +8,8 @@ This project is designed for use on High Performance Computing (HPC) systems.
 
 ### Contents: 
 
-[Installation](https://raichkel.github.io/GR_in_VR/installation.html) \
-[Usage](https://raichkel.github.io/GR_in_VR/usage.html) \
-[Usage on a Local Machine](https://raichkel.github.io/GR_in_VR/local_machine.html) \
-[Simulation Stages](https://raichkel.github.io/GR_in_VR/simulation_stages.html) \
-[Example Outputs](https://raichkel.github.io/GR_in_VR/features.html) \
+- [Installation](https://raichkel.github.io/GR_in_VR/installation.html) \
+- [Usage](https://raichkel.github.io/GR_in_VR/usage.html) \
+- [Usage on a Local Machine](https://raichkel.github.io/GR_in_VR/local_machine.html) \
+- [Simulation Stages](https://raichkel.github.io/GR_in_VR/simulation_stages.html) \
+- [Example Outputs](https://raichkel.github.io/GR_in_VR/features.html) \
