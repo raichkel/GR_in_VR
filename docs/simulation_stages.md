@@ -1,3 +1,5 @@
+[Home](https://raichkel.github.io/GR_in_VR/)
+
 ### Generating a Trajectory
 [`GR_in_VR/project/src/pre_computation/trajectory.jl`](https://github.com/raichkel/GR_in_VR/blob/main/project/src/pre_computation/trajectory.jl) can be used to calculate the trajectory that an observer would take from any given initial conditions as they fell into the event horizon of the black hole. A `.txt` file is produced with the observer position and observer velocity for each timestep. The Repository also comes with several example trajectories; [`GR_in_VR/project/src/pre_computation/trajectories/`](https://github.com/raichkel/GR_in_VR/tree/main/project/src/pre_computation/trajectories), which can be used for Schwarzschild and Kerr black holes, and wormholes respectively.
 
