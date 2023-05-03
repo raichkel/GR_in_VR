@@ -23,4 +23,5 @@ Now, ensure that all paths for the image file, trajectory, and simulation files 
 \
 `sbatch schwarzschild.sh`
 \
+\
 On the terminal of the HPC machine.
