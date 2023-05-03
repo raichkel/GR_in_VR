@@ -11,10 +11,10 @@ def numericalSort(value):
     parts[1::2] = map(int, parts[1::2])
     return parts
 
-directoryname = "colouriser/greyscale_kerr_slower"
+directoryname = "colouriser/greyscale_kerr"
 list = sorted(os.listdir(directoryname), key=numericalSort)
 
-savedirectory = "colouriser/colourised_kerr_slower"
+savedirectory = "colouriser/colourised_kerr"
 
 # reading in and colourising all files, ensuring that they are named as consecutive numbers
 # necessary for video creation step

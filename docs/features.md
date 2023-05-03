@@ -1,6 +1,9 @@
-[Home](https://raichkel.github.io/GR_in_VR/)
+[Home](https://raichkel.github.io/GR_in_VR/)    [GitHub](https://github.com/raichkel/GR_in_VR)
 
 # Features
+
+Here are links to full simulation examples of the three main functionalities of this codebase:
+
 ### Schwarzschild Black Holes
 For the full example simulation see [here](https://github.com/raichkel/GR_in_VR/blob/main/final_simulations/shwarzschild_black_hole.mp4). The files are large and so may have to be downloaded to be viewed.
 
