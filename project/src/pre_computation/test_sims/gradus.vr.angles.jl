@@ -67,4 +67,5 @@ begin
     p = plot(p, xlims = (-LIM, LIM), ylims = (-LIM, LIM), zlims = (-LIM, LIM), legend = false, camera=(10, 10))
 
     p
+    savefig("angles.png")
 end
