@@ -7,7 +7,9 @@ This project is designed for use on High Performance Computing (HPC) systems.
 
 # Docs
 
-The docs can be found on GitHub Pages, [here](https://raichkel.github.io/GR_in_VR/index.html)
+The docs can be found on GitHub Pages, [here](https://raichkel.github.io/GR_in_VR/).
+
+
 # Repository Structure
 
 💫 [GR_in_VR/final_simulations/](https://github.com/raichkel/GR_in_VR/tree/main/final_simulations) \
