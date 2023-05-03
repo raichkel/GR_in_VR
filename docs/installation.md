@@ -1,4 +1,5 @@
 # Installation 
+==================
 This project relies heavily on the [Gradus package](https://github.com/astro-group-bristol/Gradus.jl) which, in turn, relies on aspects of the [AstroRegistry](https://github.com/astro-group-bristol/AstroRegistry) AstroRegistry. The AstroRegistry can be added as follows:\
 \
  `julia>] registry add https://github.com/astro-group-bristol/AstroRegistry`\
