@@ -5,6 +5,9 @@
 Trajectory of the observer is pre-computed using the Gradus package, and then passed to Unity, which will display the scenario in VR. \
 This project is designed for use on High Performance Computing (HPC) systems.
 
+# Docs
+
+The docs can be found on GitHub Pages, [here](https://raichkel.github.io/GR_in_VR/index.html)
 # Repository Structure
 
 💫 [GR_in_VR/final_simulations/](https://github.com/raichkel/GR_in_VR/tree/main/final_simulations) \
