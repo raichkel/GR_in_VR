@@ -11,6 +11,7 @@ This project is designed for use on High Performance Computing (HPC) systems.
 - [Installation](https://raichkel.github.io/GR_in_VR/installation.html) 
 - [Usage](https://raichkel.github.io/GR_in_VR/usage.html) 
 - [Simulation Stages](https://raichkel.github.io/GR_in_VR/simulation_stages.html) 
+- [Displaying Simulations in VR](https://raichkel.github.io/GR_in_VR/vr.html)
 - [Example Outputs](https://raichkel.github.io/GR_in_VR/features.html) 
 - [Usage on a Local Machine](https://raichkel.github.io/GR_in_VR/local_machine.html) 
 
