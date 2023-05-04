@@ -19,3 +19,10 @@ This project is designed for use on High Performance Computing (HPC) systems.
 See the GitHub repo at [this link](https://github.com/raichkel/GR_in_VR).
 
 Any Queries? Please [raise an issue](https://github.com/raichkel/GR_in_VR/issues) on the repo.
+\
+\
+\
+\
+\
+\
+This website was created by Rachel Kane. 2023.
