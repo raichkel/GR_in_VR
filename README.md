@@ -30,6 +30,10 @@ The documentation for this project can be found on GitHub Pages, [here](https://
     Runner files for use with the batch scripts on HPC systems. \
 💫 [GR_in_VR/project/test_frames/](https://github.com/raichkel/GR_in_VR/tree/main/project/test_frames) \
     Miscellaneous frames used in the test code.\
+💫 [GR_in_VR/project/vr_files/](https://github.com/raichkel/GR_in_VR/tree/main/project/vr_files) \
+    Files to set up Unity Hub for runningthe simulation.\
+    
+
   
   
 # Installation 
