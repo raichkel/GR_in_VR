@@ -13,23 +13,23 @@ The documentation for this project can be found on GitHub Pages, [here](https://
 # Repository Structure
 
 💫 [GR_in_VR/final_simulations/](https://github.com/raichkel/GR_in_VR/tree/main/final_simulations) \
-    Contains output simulations for Schwarzschild and Kerr black holes, as well as a Morris-Thorne wormhole. \
+    Contains the output simulations for Schwarzschild and Kerr black holes, as well as a Morris-Thorne wormhole. \
 💫 [GR_in_VR/project/src/pre_computation/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/pre_computation) \
-    Code to generate simulation, including test images and test simulations. \
+    Code to generate the simulation, including test images and test simulations. \
 💫 [GR_in_VR/project/src/accretion_disk/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/accretion_disk) \
     Process files for modelling the accretion disk. \
 💫 [GR_in_VR/project/src/batch_scripts/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/batch_scripts) \
     Shell script files for running code on HPC. \
 💫 [GR_in_VR/project/src/sysimage/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/sysimage) \
-    Code to generate sysimage using [PackageCompiler](https://github.com/JuliaLang/PackageCompiler.jl) package. \
+    Code to generate sysimage using the [PackageCompiler](https://github.com/JuliaLang/PackageCompiler.jl) package. \
 💫 [GR_in_VR/project/src/VR/](https://github.com/raichkel/GR_in_VR/tree/main/project/src/VR) \
-    C# code for running simulation on VR headset with Unity. \
+    C# code for running the simulation on VR headset with Unity. \
 💫 [GR_in_VR/project/post_processing/](https://github.com/raichkel/GR_in_VR/tree/main/project/post_processing) \
     Code for colourising images and compiling it into a video. \
 💫 [GR_in_VR/project/runner_files/](https://github.com/raichkel/GR_in_VR/tree/main/project/runner_files) \
     Runner files for use with the batch scripts on HPC systems. \
 💫 [GR_in_VR/project/test_frames/](https://github.com/raichkel/GR_in_VR/tree/main/project/test_frames) \
-    Miscellaneous frames used in test code.\
+    Miscellaneous frames used in the test code.\
   
   
 # Installation 
